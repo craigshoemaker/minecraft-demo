@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>Intro to JavaScript</title>
+        <style>
+            html { 
+                background: url(wallpaper.jpg) no-repeat center center fixed; 
+                -webkit-background-size: cover;
+                -moz-background-size: cover;
+                -o-background-size: cover;
+                background-size: cover;
+            }
+            #img {
+                position:relative;
+                display:block;
+                width:280px;
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="up();">Up</button>
+        <button onclick="down();">Down</button>
+        <button onclick="left();">Left</button>
+        <button onclick="right();">Right</button>
+        <img id="img" src="minecraft.png" style="top:250px;left:250px" />
+        <script>
+            function up() {
+                var $img = document.getElementById('img');
+                $img.style.top = (parseInt($img.style.top) - 25) + 'px';
+            }
+
+            function down() {
+                var $img = document.getElementById('img');
+                $img.style.top = (parseInt($img.style.top) + 25) + 'px';
+            }
+
+            function left() {
+                var $img = document.getElementById('img');
+                $img.style.left = (parseInt($img.style.left) - 25) + 'px';
+            }
+
+            function right() {
+                var $img = document.getElementById('img');
+                $img.style.left = (parseInt($img.style.left) + 25) + 'px';
+            }
+        </script>
+    </body>
+</html>
